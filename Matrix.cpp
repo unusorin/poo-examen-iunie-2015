@@ -14,6 +14,20 @@ Matrix<T>::Matrix(unsigned width, unsigned height, const T &initialValue) {
     reset(width, height, initialValue);
 }
 
+
+template <typename T>
+Matrix<T>::~Matrix() {
+    //do nothing
+}
+
+template <typename T>
+Matrix<T>::Matrix() {
+    this->width = 1;
+    this->height = 1;
+    reset(1, 1, 0);
+}
+
+
 template<typename T>
 Matrix<T>::Matrix(const T &initialValue) {
     this->width = 1;

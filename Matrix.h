@@ -43,6 +43,16 @@ public:
     Matrix(const T &initialValue);
 
     /**
+     * Constructor
+     */
+    Matrix();
+
+    /**
+     * Destructor
+     */
+    virtual ~Matrix();
+
+    /**
      * MatrixProxy handle double array subscript operator overload
      */
     class MatrixProxy {
