@@ -38,7 +38,7 @@ public:
     Matrix(unsigned width, unsigned height, const T &initialValue);
 
     /**
-     * Constructor
+     * Constructor for converting a undefined type to Matrix
      */
     Matrix(const T &initialValue);
 
@@ -46,6 +46,11 @@ public:
      * Constructor
      */
     Matrix();
+
+    /**
+     * Copy constructor
+     */
+    Matrix(const Matrix &matrix);
 
     /**
      * Destructor
@@ -68,7 +73,7 @@ public:
         typename Matrix<T>::MatrixProxy;
 
         /**
-         * Constructo
+         * Constructor
          */
         MatrixProxy(Matrix<T> *matrix, unsigned currentHeight) : matrix(matrix), currentHeight(currentHeight) { }
 

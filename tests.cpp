@@ -96,6 +96,14 @@ int tests() {
             return 110;
         }
     }
+    {
+        Matrix<double> matrix1(5, 5, 6);
+        Matrix<double> matrix2(matrix1);
+
+        if (matrix1 != matrix2) {
+            return 111;
+        }
+    }
 
     return 0;
 }

@@ -15,12 +15,17 @@ Matrix<T>::Matrix(unsigned width, unsigned height, const T &initialValue) {
 }
 
 
-template <typename T>
+template<typename T>
 Matrix<T>::~Matrix() {
     //do nothing
 }
 
-template <typename T>
+template<typename T>
+Matrix<T>::Matrix(const Matrix &matrix) {
+    (*this) = matrix;
+}
+
+template<typename T>
 Matrix<T>::Matrix() {
     this->width = 1;
     this->height = 1;
